@@ -37,16 +37,6 @@ IBAN varchar(34) NOT NULL,
 fecha_inscripcion DATE NOT NULL,
 modelo varchar(10),
 FOREIGN KEY (modelo) REFERENCES suscripcion(modelo) ON DELETE CASCADE);
-CREATE TABLE actividad(
-id_actividad integer PRIMARY KEY AUTOINCREMENT,
-tipo varchar(30) NOT NULL,
-duracion TIME NOT NULL,
-aforo integer NOT NULL,
-numero_sala integer NOT NULL,
-id_gimnasio integer,
-fecha TIME NOT NULL,
-UNIQUE (id_actividad,fecha),
-FOREIGN KEY (id_gimnasio) REFERENCES gimnasio(id_gimnasio) ON DELETE CASCADE);
 CREATE TABLE IF NOT EXISTS "gimnasio_cliente"(
 id_gimnasio INTEGER,
 documentacion INTEGER,
@@ -73,3 +63,13 @@ hora_inicio TIME NOT NULL,
 PRIMARY KEY(id_actividad, documentacion),
 FOREIGN KEY(id_actividad) REFERENCES actividad (id_actividad) ON DELETE CASCADE,
 FOREIGN KEY (documentacion) REFERENCES cliente(documentacion) ON DELETE CASCADE);
+CREATE TABLE actividad(
+id_actividad integer PRIMARY KEY AUTOINCREMENT,
+tipo varchar(30) NOT NULL,
+duracion TIME NOT NULL,
+aforo integer NOT NULL,
+numero_sala integer NOT NULL,
+id_gimnasio integer,
+fecha DATE NOT NULL,
+UNIQUE (id_actividad,fecha),
+FOREIGN KEY (id_gimnasio) REFERENCES gimnasio(id_gimnasio) ON DELETE CASCADE);
