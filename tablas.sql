@@ -23,15 +23,6 @@ documentacion varchar(9) PRIMARY KEY,
 nombre varchar(25) NOT NULL,
 apellido varchar(25) NOT NULL,
 labor varchar(30) NOT NULL);
-CREATE TABLE cliente(
-documentacion varchar(9) PRIMARY KEY,
-nombre varchar(25) NOT NULL,
-apellido varchar(25) NOT NULL,
-fecha_nacimiento DATE NOT NULL,
-IBAN varchar(34) NOT NULL,
-fecha_inscripcion DATE NOT NULL,
-modelo varchar(10),
-FOREIGN KEY (modelo) REFERENCES suscripcion(modelo) ON DELETE CASCADE);
 CREATE TABLE actividad(
 id_actividad integer PRIMARY KEY AUTOINCREMENT,
 tipo varchar(30) NOT NULL,
@@ -49,6 +40,15 @@ modelo varchar(10) PRIMARY KEY,
 precio integer NOT NULL,
 permanencia VARCHAR(10) NOT NULL,
 matricula integer NOT NULL);
+CREATE TABLE cliente(
+documentacion varchar(9) PRIMARY KEY,
+nombre varchar(25) NOT NULL,
+apellido varchar(25) NOT NULL,
+fecha_nacimiento DATE NOT NULL,
+IBAN varchar(34) NOT NULL,
+fecha_inscripcion DATE NOT NULL,
+modelo varchar(10),
+FOREIGN KEY (modelo) REFERENCES suscripcion(modelo) ON UPDATE CASCADE);
 CREATE TABLE IF NOT EXISTS "gimnasio_cliente"(
 id_gimnasio INTEGER,
 documentacion VARCHAR(9),

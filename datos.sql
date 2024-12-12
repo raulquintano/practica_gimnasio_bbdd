@@ -100,7 +100,7 @@ INSERT INTO actividad VALUES (97, 'Stretching', '01:15:00', 10, 11, 1, 'X6473928
 INSERT INTO actividad VALUES (98, 'Boxeo', '00:45:00', 20, 12, 2, '12345679J', '2025-01-25');
 INSERT INTO actividad VALUES (99, 'Zumba', '01:30:00', 15, 13, 3, 'Z7890652Z', '2025-01-26');
 INSERT INTO actividad VALUES (100, 'Yoga', '00:50:00', 12, 14, 1, 'Y7402839G', '2025-01-26');
-INSERT INTO suscripcion VALUES('BASICA',39,'3 Meses',60);
+INSERT INTO suscripcion VALUES('BASICO',39,'3 Meses',60);
 INSERT INTO suscripcion VALUES('ESTANDAR',49,'6 Meses',50);
 INSERT INTO suscripcion VALUES('PREMIUM',59,'10 Meses',5);
 INSERT INTO equipamiento VALUES (1, 'Life Fitness', 'Barra 10KG', 'Hipertrofia y Fuerza');
