@@ -67,4 +67,3 @@ documentacion VARCHAR(9),
 PRIMARY KEY(id_actividad, documentacion),
 FOREIGN KEY(id_actividad) REFERENCES actividad (id_actividad) ON DELETE CASCADE,
 FOREIGN KEY (documentacion) REFERENCES cliente(documentacion) ON DELETE CASCADE);
-
